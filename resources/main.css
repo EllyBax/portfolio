@@ -135,30 +135,36 @@ input[type="radio"]:checked + label {
   background-color: var(--secondary-bg);
 }
 
-.programming {
+.programming,
+.projects {
   list-style: none;
 }
 
-.programming > li {
+.programming > li,
+.projects > li {
   margin: 1rem auto;
 }
 
-.programming > li > a {
+.programming > li > a,
+.projects > li > a {
   font-size: 1.2rem;
   display: block;
   margin: 0.4rem auto;
   text-decoration: none;
 }
 
-.programming > li > a::before {
+.programming > li > a::before,
+.projects > li > a::before {
   content: "- ";
 }
 
-.programming > li > a:hover {
+.programming > li > a:hover,
+.projects > li > a:hover {
   color: var(--secondary-text);
 }
 
-.programming > li > span {
+.programming > li > span,
+.projects > li > span {
   font-size: 1rem;
   /* display: none; */
   display: block;
@@ -168,10 +174,54 @@ input[type="radio"]:checked + label {
   transition: color 0.3s ease;
 }
 
-.programming > li:hover > span {
+.programming > li:hover > span,
+.projects > li:hover > span {
   color: var(--secondary-text);
 }
 
 .about {
   font-size: 1.2rem;
+}
+
+.education {
+  padding: 1rem 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.education > div {
+  border-left: 2px solid var(--accent);
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.education h3 {
+  color: var(--accent);
+}
+
+.date {
+  font-size: 1.2rem;
+  color: var(--secondary-text);
+}
+
+.college > a {
+  color: var(--main-text);
+  text-decoration: none;
+}
+
+.interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.interests > span {
+  background: #bbda5588;
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: 5px;
 }
