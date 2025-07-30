@@ -32,7 +32,7 @@ h1 {
 }
 
 main {
-  width: clamp(300px, 700px, 90%);
+  width: clamp(300px, 800px, 90%);
   min-height: 80%;
   padding: 1rem;
   /* border: 0.5px solid var(--main-text); */
@@ -92,7 +92,7 @@ main {
 }
 
 .content {
-  margin: 1rem auto;
+  margin: 0 auto;
   display: flex;
   height: clamp(30px, 400px, 600px);
   width: 100%;
@@ -148,7 +148,6 @@ input[type="radio"]:checked + label {
   display: block;
   margin: 0.4rem auto;
   text-decoration: none;
-  color: var(--accent);
 }
 
 .programming > li > a::before {
@@ -171,4 +170,8 @@ input[type="radio"]:checked + label {
 
 .programming > li:hover > span {
   color: var(--secondary-text);
+}
+
+.about {
+  font-size: 1.2rem;
 }
