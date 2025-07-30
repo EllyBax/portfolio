@@ -76,6 +76,60 @@ main {
   font-weight: 600;
   text-align: start;
   display: block;
-  min-width: 6rem;
+  min-width: 8rem;
+  padding: 0.2rem 0;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
   color: var(--accent);
+}
+
+.links > a::before {
+  content: ": ";
+}
+
+.links a:hover {
+  border-bottom: 1px solid var(--accent);
+}
+
+.content {
+  margin: 1rem auto;
+  display: flex;
+  height: clamp(30px, 400px, 600px);
+  width: 100%;
+}
+
+.categories {
+  padding: 1rem;
+  width: 25%;
+  border-right: 1px solid var(--accent);
+  background-color: var(--secondary-bg);
+  list-style: none;
+  display: grid;
+  gap: 0.4rem;
+  place-content: start;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  cursor: pointer;
+  padding: 0.4rem 1rem;
+  transition: all 0.5s ease-in-out;
+  font-size: 1.2rem;
+}
+
+input[type="radio"] + label:hover {
+  background: linear-gradient(to right, var(--main-bg), var(--accent));
+}
+
+input[type="radio"]:checked + label {
+  color: var(--accent);
+  font-weight: semibold;
+}
+
+.content-body {
+  width: 75%;
+  height: 100%;
 }
