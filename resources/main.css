@@ -10,7 +10,7 @@
   :root {
     --main-bg: #101010;
     --main-text: #f3f3f3;
-    --secondary-bg: #131313cf;
+    --secondary-bg: #131313;
     --secondary-text: #f1f1f1;
     --accent: #bada55;
   }
@@ -101,8 +101,7 @@ main {
 .categories {
   padding: 1rem;
   width: 25%;
-  border-right: 1px solid var(--accent);
-  background-color: var(--secondary-bg);
+  /* border-right: 1px solid var(--accent); */
   list-style: none;
   display: grid;
   gap: 0.4rem;
@@ -126,10 +125,50 @@ input[type="radio"] + label:hover {
 
 input[type="radio"]:checked + label {
   color: var(--accent);
-  font-weight: semibold;
+  font-weight: bold;
 }
 
 .content-body {
   width: 75%;
   height: 100%;
+  padding: 0.5rem 1rem;
+  background-color: var(--secondary-bg);
+}
+
+.programming {
+  list-style: none;
+}
+
+.programming > li {
+  margin: 1rem auto;
+}
+
+.programming > li > a {
+  font-size: 1.2rem;
+  display: block;
+  margin: 0.4rem auto;
+  text-decoration: none;
+  color: var(--accent);
+}
+
+.programming > li > a::before {
+  content: "- ";
+}
+
+.programming > li > a:hover {
+  color: var(--secondary-text);
+}
+
+.programming > li > span {
+  font-size: 1rem;
+  /* display: none; */
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  transition: color 0.3s ease;
+}
+
+.programming > li:hover > span {
+  color: var(--secondary-text);
 }
