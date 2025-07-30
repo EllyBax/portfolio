@@ -120,7 +120,7 @@ input[type="radio"] + label {
 }
 
 input[type="radio"] + label:hover {
-  background: linear-gradient(to right, var(--main-bg), var(--accent));
+  background: linear-gradient(to right, var(--secondary-bg), #bbda5588);
 }
 
 input[type="radio"]:checked + label {
@@ -164,7 +164,7 @@ input[type="radio"]:checked + label {
   /* display: none; */
   display: block;
   margin-top: 0.2rem;
-  color: var(--text-color);
+  color: var(--main-text);
   opacity: 0.8;
   transition: color 0.3s ease;
 }
