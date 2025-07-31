@@ -35,13 +35,16 @@ main {
   width: clamp(300px, 800px, 90%);
   min-height: 80%;
   padding: 1rem;
-  /* border: 0.5px solid var(--main-text); */
-  /* box-shadow: 0 0 1px var(--main-text); */
   border-radius: 12px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+/* Hide radio inputs */
+input[type="radio"] {
+  display: none;
 }
 
 .title {
@@ -101,29 +104,35 @@ main {
 .categories {
   padding: 1rem;
   width: 25%;
-  /* border-right: 1px solid var(--accent); */
   list-style: none;
+  background-color: var(--secondary-bg);
   display: grid;
   gap: 0.4rem;
   place-content: start;
 }
 
-input[type="radio"] {
-  display: none;
-}
-
-input[type="radio"] + label {
+.categories label {
   cursor: pointer;
   padding: 0.4rem 1rem;
   transition: all 0.5s ease-in-out;
   font-size: 1.2rem;
+  display: block;
 }
 
-input[type="radio"] + label:hover {
+.categories label:hover {
   background: linear-gradient(to right, var(--secondary-bg), #bbda5588);
 }
 
-input[type="radio"]:checked + label {
+/* Active label styling - Updated selectors to work with new html structure */
+#projects:checked ~ .content .categories label[for="projects"],
+#programmingLanguages:checked
+  ~ .content
+  .categories
+  label[for="programmingLanguages"],
+#about:checked ~ .content .categories label[for="about"],
+#education:checked ~ .content .categories label[for="education"],
+#interests:checked ~ .content .categories label[for="interests"],
+#contact:checked ~ .content .categories label[for="contact"] {
   color: var(--accent);
   font-weight: bold;
 }
@@ -132,7 +141,6 @@ input[type="radio"]:checked + label {
   width: 75%;
   height: 100%;
   padding: 0.5rem 1rem;
-  background-color: var(--secondary-bg);
 }
 
 .programming,
@@ -166,7 +174,6 @@ input[type="radio"]:checked + label {
 .programming > li > span,
 .projects > li > span {
   font-size: 1rem;
-  /* display: none; */
   display: block;
   margin-top: 0.2rem;
   color: var(--main-text);
@@ -215,6 +222,7 @@ input[type="radio"]:checked + label {
 
 .interests {
   display: flex;
+  padding: 0.4rem;
   flex-wrap: wrap;
   gap: 1rem;
 }
@@ -274,4 +282,57 @@ input[type="radio"]:checked + label {
 
 .contact input[type="submit"]:hover {
   background-color: #bbda5588;
+}
+
+/* Hide all content sections by default */
+.projects,
+.programming,
+.about,
+.education,
+.interests,
+.contact {
+  display: none;
+}
+
+/* Show specific content based on which radio is checked - Updated selectors */
+#projects:checked ~ .content .content-body .projects {
+  display: block;
+}
+
+#programmingLanguages:checked ~ .content .content-body .programming {
+  display: block;
+}
+
+#about:checked ~ .content .content-body .about {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#education:checked ~ .content .content-body .education {
+  display: flex;
+}
+
+#interests:checked ~ .content .content-body .interests {
+  display: flex;
+}
+
+#contact:checked ~ .content .content-body .contact {
+  display: block;
+}
+
+/* Add smooth transitions */
+.content-body > * {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

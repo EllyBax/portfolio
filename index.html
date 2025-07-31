@@ -31,6 +31,25 @@
   </head>
   <body>
     <main>
+      <!-- Radio inputs moved to top level for CSS sibling selectors to work -->
+      <input
+        type="radio"
+        id="projects"
+        name="category"
+        value="projects"
+        checked
+      />
+      <input
+        type="radio"
+        id="programmingLanguages"
+        name="category"
+        value="programmingLanguages"
+      />
+      <input type="radio" id="about" name="category" value="about" />
+      <input type="radio" id="education" name="category" value="education" />
+      <input type="radio" id="interests" name="category" value="interests" />
+      <input type="radio" id="contact" name="category" value="contact" />
+
       <div class="title">
         <div class="names">
           <h1>Elly B</h1>
@@ -56,45 +75,21 @@
           </button>
         </div>
       </div>
+
       <div class="content">
         <div class="categories">
-          <input
-            type="radio"
-            id="programmingLanguages"
-            name="category"
-            value="programmingLanguages"
-            checked
-          />
-          <label for="programmingLanguages">Programming Languages</label><br />
-
-          <input type="radio" id="about" name="category" value="about" />
-          <label for="about">About</label><br />
-
-          <input
-            type="radio"
-            id="education"
-            name="category"
-            value="education"
-          />
-          <label for="education">Education</label><br />
-
-          <input
-            type="radio"
-            id="interests"
-            name="category"
-            value="interests"
-          />
-          <label for="interests">Interests</label><br />
-
-          <input type="radio" id="projects" name="category" value="projects" />
-          <label for="projects">Projects</label><br />
-
-          <input type="radio" id="contact" name="category" value="contact" />
-          <label for="contact">Contact</label><br />
+          <!-- Labels stay in sidebar for visual organization -->
+          <label for="projects">Projects</label>
+          <label for="programmingLanguages">Programming Languages</label>
+          <label for="about">About</label>
+          <label for="education">Education</label>
+          <label for="interests">Interests</label>
+          <label for="contact">Contact</label>
         </div>
+
         <section class="content-body" aria-labelledby="pl-heading">
           <!-- Programming languages -->
-          <!-- <ul id="programming" class="programming">
+          <ul class="programming">
             <li>
               <a
                 href="https://www.typescriptlang.org"
@@ -154,10 +149,10 @@
                 little love.</span
               >
             </li>
-          </ul> -->
+          </ul>
 
           <!-- About Me -->
-          <!-- <div id="about" class="about">
+          <div class="about">
             <p>
               I am a full stack developer with over two years of experience
               specializing in
@@ -227,16 +222,22 @@
 
             <p>
               I have successfully delivered multiple
-              <a href="#projects" style="color: #007acc"
-                >independent projects</a
+              <label
+                for="projects"
+                style="
+                  color: #007acc;
+                  cursor: pointer;
+                  text-decoration: underline;
+                "
+                >independent projects</label
               >
               and am eager to apply my skills in collaborative team
               environments.
             </p>
-          </div> -->
+          </div>
 
           <!-- Education -->
-          <!-- <div class="education" id="education">
+          <div class="education">
             <div>
               <h3>
                 Ordinary Diploma in Electronics and Telecommunications
@@ -266,19 +267,19 @@
                 </a>
               </p>
             </div>
-          </div> -->
+          </div>
 
           <!-- Interests -->
-          <!-- <div class="interests" id="interests">
+          <div class="interests">
             <span>Software Development</span>
             <span>Problem Solving & Algorithm Optimization</span>
             <span>Technical Literature</span>
             <span>Continuous Learning</span>
             <span>Knowledge Sharing & Mentorship</span>
-          </div> -->
+          </div>
 
           <!-- Projects -->
-          <!-- <ul id="projects" class="projects">
+          <ul class="projects">
             <li>
               <a
                 href="https://www.npmjs.com/package/trysafely"
@@ -311,10 +312,10 @@
               >
               <span>A web-based rock-paper-scissors single-player game.</span>
             </li>
-          </ul> -->
+          </ul>
 
           <!-- Contact -->
-          <div class="contact" id="contact">
+          <div class="contact">
             <form action="#">
               <div>
                 <label for="full_name">Name:</label>
@@ -336,16 +337,16 @@
                 />
               </div>
               <div>
-                <label for="email">Email:</label>
+                <label for="email_contact">Email:</label>
                 <input
-                  id="email"
+                  id="email_contact"
                   type="email"
                   name="email"
                   placeholder="example@yourcompany.org"
                 />
               </div>
               <div>
-                <label for="message">Name:</label>
+                <label for="message">Message:</label>
                 <textarea
                   id="message"
                   cols="30"
