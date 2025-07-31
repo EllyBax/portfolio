@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog - Coming Soon | ellyb</title>
+    <link
+      rel="shortcut icon"
+      href="/resources/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/resources/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/resources/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/resources/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/resources/site.webmanifest" />
+    <style>
+      @import url("/resources/main.css");
+
+      h1 {
+        font-size: 6rem;
+        font-weight: bolder;
+      }
+
+      .container {
+        text-align: center;
+        max-width: 600px;
+        padding: 2rem;
+        animation: fadeInUp 0.8s ease-out;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.05);
+          opacity: 0.8;
+        }
+      }
+
+      .subtitle {
+        font-size: 1.4rem;
+        color: var(--secondary-text);
+        margin-bottom: 2rem;
+        opacity: 0.9;
+      }
+
+      .description {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 3rem;
+        color: var(--main-text);
+        opacity: 0.8;
+      }
+
+      .coming-soon-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #bbda5588, #bbda5544);
+        color: var(--accent);
+        padding: 0.8rem 1.5rem;
+        border-radius: 25px;
+        font-weight: bold;
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        border: 1px solid var(--accent);
+        animation: glow 3s ease-in-out infinite alternate;
+      }
+
+      @keyframes glow {
+        from {
+          box-shadow: 0 0 10px #bbda5533;
+        }
+        to {
+          box-shadow: 0 0 20px #bbda5566, 0 0 30px #bbda5544;
+        }
+      }
+
+      .back-button {
+        all: unset;
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        gap: 0.5rem;
+        color: var(--main-text);
+        text-decoration: none;
+        padding: 0.3rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        border-bottom: 1px solid var(--accent);
+      }
+
+      .back-button:hover {
+        color: var(--accent);
+      }
+
+      .back-arrow {
+        font-size: 1.4rem;
+        transition: transform 0.3s ease;
+      }
+
+      .back-button:hover .back-arrow {
+        transform: translateX(-3px);
+      }
+
+      .footer-note {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.9rem;
+        color: var(--secondary-text);
+        opacity: 0.6;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .container {
+          padding: 1rem;
+        }
+
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        .subtitle {
+          font-size: 1.2rem;
+        }
+
+        .description {
+          font-size: 1rem;
+        }
+
+        .back-button {
+          padding: 0.8rem 1.5rem;
+          font-size: 1.1rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 2rem;
+        }
+
+        .blog-icon {
+          font-size: 3rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Blog</h1>
+
+      <p class="subtitle">Thoughts, tutorials, and tech insights</p>
+
+      <div class="coming-soon-badge">🚀 Coming Soon</div>
+
+      <p class="description">
+        I'm working on something exciting! This space will soon be filled with
+        technical articles, coding tutorials, project deep-dives, and insights
+        from my development journey. Stay tuned for content about TypeScript,
+        web development, and the latest in tech.
+      </p>
+
+      <a href="/" class="back-button">
+        <span class="back-arrow">←</span>
+        Back to Portfolio
+      </a>
+    </div>
+
+    <div class="footer-note">Built with CSS and enthusiasm ✨</div>
+  </body>
+</html>

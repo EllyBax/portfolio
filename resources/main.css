@@ -1,18 +1,18 @@
-@import url("https://fonts.cdnfonts.com/css/spline-sans-mono");
+@import url("https://fonts.cdnfonts.com/css/inter");
 
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: "Spline Sans Mono", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --main-bg: #101010;
+    --main-bg: #060606;
     --main-text: #f3f3f3;
-    --secondary-bg: #131313;
+    --secondary-bg: #101010;
     --secondary-text: #f1f1f1;
-    --accent: #bada55;
+    --accent: #cad5a6;
   }
 }
 
@@ -26,9 +26,34 @@ body {
   justify-content: center;
 }
 
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 h1 {
   font-size: 6rem;
   font-weight: bolder;
+  position: relative;
+}
+
+h1:hover::after {
+  content: "achubila";
+  position: absolute;
+  left: 100%;
+  top: 0;
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideInFromLeft 0.3s ease-out forwards;
+}
+
+@keyframes slideInFromLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 main {
@@ -63,10 +88,14 @@ input[type="radio"] {
   padding: 0.5rem;
 }
 
-.names span {
+.names .location {
+  font-size: 1rem;
+  text-shadow: none;
+}
+
+.names p {
   color: var(--accent);
   font-size: 1.4rem;
-  text-shadow: 0 1px var(--main-text);
 }
 
 .links {
@@ -106,10 +135,10 @@ input[type="radio"] {
 }
 
 .categories {
-  padding: 1rem;
+  padding: 1rem 0;
   width: 25%;
   list-style: none;
-  background-color: var(--secondary-bg);
+  border-right: 2px solid #27272546;
   display: grid;
   gap: 0.4rem;
   place-content: start;
@@ -117,19 +146,18 @@ input[type="radio"] {
 
 .categories label:focus-visible {
   outline: 2px solid var(--accent);
-  background: linear-gradient(to right, var(--secondary-bg), #bbda5588);
+  background: linear-gradient(to right, var(--secondary-bg), #27272546);
 }
 
 .categories label {
   cursor: pointer;
   padding: 0.4rem 1rem;
-  transition: all 0.5s ease-in-out;
   font-size: 1.2rem;
   display: block;
 }
 
 .categories label:hover {
-  background: linear-gradient(to right, var(--secondary-bg), #bbda5588);
+  background: linear-gradient(to right, var(--secondary-bg), #27272546);
 }
 
 /* Active label styling - Updated selectors to work with new html structure */
@@ -144,6 +172,7 @@ input[type="radio"] {
 #contact:checked ~ .content .categories label[for="contact"] {
   color: var(--accent);
   font-weight: bold;
+  background: linear-gradient(to right, var(--secondary-bg), #27272546);
 }
 
 .content-body {
@@ -159,12 +188,18 @@ input[type="radio"] {
 
 .programming > li,
 .projects > li {
-  margin: 1rem auto;
+  margin: 0 auto;
+}
+
+.programming > li:hover,
+.projects > li:hover {
+  cursor: pointer;
+  background: linear-gradient(to right, var(--secondary-bg), #27272546);
 }
 
 .programming > li > a,
 .projects > li > a {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   display: block;
   margin: 0.4rem auto;
   text-decoration: none;
@@ -183,7 +218,6 @@ input[type="radio"] {
 .programming > li > span,
 .projects > li > span {
   font-size: 1rem;
-  display: block;
   margin-top: 0.2rem;
   color: var(--main-text);
   opacity: 0.8;
@@ -237,7 +271,7 @@ input[type="radio"] {
 }
 
 .interests > span {
-  background: #bbda5588;
+  background: #27272546;
   font-size: 1.2rem;
   padding: 1rem;
   border-radius: 5px;
@@ -271,7 +305,7 @@ input[type="radio"] {
 .contact textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid #bbda5588;
+  border: 1px solid #27272546;
   border-radius: 4px;
   background-color: var(--main-bg);
   color: var(--main-text);
@@ -290,7 +324,7 @@ input[type="radio"] {
 }
 
 .contact input[type="submit"]:hover {
-  background-color: #bbda5588;
+  background-color: #27272546;
 }
 
 /* Hide all content sections by default */
