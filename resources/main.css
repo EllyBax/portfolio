@@ -140,7 +140,7 @@ input[type="radio"] {
   padding: 1rem 0;
   width: 25%;
   list-style: none;
-  border-right: 2px solid #27272546;
+  border-right: 1px solid #27272546;
   display: grid;
   gap: 0.4rem;
   place-content: center;
@@ -174,7 +174,7 @@ input[type="radio"] {
 #contact:checked ~ .content .categories label[for="contact"] {
   color: var(--accent);
   font-weight: bold;
-  background: linear-gradient(to right, var(--secondary-bg), #0c0c0c7b);
+  background: linear-gradient(to right, var(--secondary-bg), #0808087b);
 }
 
 .content-body {
