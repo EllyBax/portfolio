@@ -63,14 +63,16 @@
           <button
             style="
               all: unset;
-              background-color: var(--accent);
+              border: 1px solid var(--accent);
+              background: var(--accent);
               padding: 0.4rem;
-              border-radius: 6px;
+              border-radius: 4px;
             "
           >
             <a
               style="
                 font-size: 1.2rem;
+                font-weight: bold;
                 text-decoration: none;
                 color: var(--main-bg);
               "
@@ -297,7 +299,7 @@
                 >A TypeScript utility helper to simplify error handling.</span
               >
             </li>
-            <li>
+            <!-- <li>
               <a
                 href="https://exam-checkin.netlify.app/"
                 style="color: #4caf50"
@@ -308,7 +310,7 @@
                 >A platform to sign student examination attendance using
                 fingerprint.</span
               >
-            </li>
+            </li> -->
             <li>
               <a
                 href="https://rp-scissors.netlify.app/"
@@ -318,18 +320,50 @@
               >
               <span>A web-based rock-paper-scissors single-player game.</span>
             </li>
+            <!-- <li>
+              <a
+                href="https://dartu.netlify.app/"
+                style="color: #e88120"
+                target="_blank"
+                >face.attend</a
+              >
+              <span
+                >A web appliaction to record student attendance using facial
+                recognition.</span
+              >
+            </li> -->
           </ul>
 
           <!-- Contact -->
           <div class="contact">
-            <form action="#">
+            <form
+              action="https://formsubmit.co/25f11d692c946f5487b0d779434c2e04"
+              method="POST"
+            >
+              <input
+                type="hidden"
+                name="_next"
+                value="https://jrdv.link/thanks.html"
+              />
+              <input
+                type="hidden"
+                name="_subject"
+                value="new submission from jrdv.link!"
+              />
+              <input type="text" name="_honey" style="display: none" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input
+                type="hidden"
+                name="_blacklist"
+                value="free money, click here, win a prize, guaranteed, act now, limited time offer, earn cash, make money fast, spam, buy now, special promotion, risk-free, 100% satisfied, free trial, unsubscribe, congratulations, winner, cheap, offer expires, call now"
+              />
               <div>
                 <label for="full_name">Name:</label>
                 <input
                   id="full_name"
                   type="text"
                   name="full_name"
-                  placeholder="Full Name"
+                  placeholder="full name"
                   required
                 />
               </div>
@@ -339,7 +373,7 @@
                   id="phone"
                   type="tel"
                   name="phone"
-                  placeholder="Phone Number"
+                  placeholder="phone number"
                 />
               </div>
               <div>
@@ -349,6 +383,7 @@
                   type="email"
                   name="email"
                   placeholder="example@yourcompany.org"
+                  required
                 />
               </div>
               <div>
@@ -358,13 +393,13 @@
                   name="message"
                   cols="30"
                   rows="4"
-                  placeholder="Leave your message here"
+                  placeholder="leave your message here"
                   required
                 >
                 </textarea>
               </div>
               <div>
-                <input type="submit" value="Submit" />
+                <input type="submit" value="submit" />
               </div>
             </form>
           </div>

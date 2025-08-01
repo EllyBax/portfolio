@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You | ellyb</title>
+    <style>
+      @import url("/resources/main.css");
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+      }
+
+      .thank-you {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      h2 {
+        font-size: 6rem;
+        font-weight: bolder;
+      }
+
+      p {
+        margin: 10px 0;
+        font-size: 1.2rem;
+      }
+
+      .back-button {
+        all: unset;
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        gap: 0.5rem;
+        color: var(--main-text);
+        text-decoration: none;
+        padding: 0.3rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        border-bottom: 1px solid var(--accent);
+      }
+
+      .back-button:hover {
+        color: var(--accent);
+      }
+
+      .back-arrow {
+        font-size: 1.4rem;
+        transition: transform 0.3s ease;
+      }
+
+      .back-button:hover .back-arrow {
+        transform: translateX(-3px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="thank-you">
+      <h2>Thank You!</h2>
+      <p>Your message has been successfully sent.</p>
+      <p>I'll get back to you as soon as possible!</p>
+      <a href="/" class="back-button">
+        <span class="back-arrow">←</span>
+        Back to Portfolio
+      </a>
+    </div>
+  </body>
+</html>
