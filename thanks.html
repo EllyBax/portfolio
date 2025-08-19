@@ -1,70 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Thank You | ellyb</title>
     <style>
-      @import url("/resources/main.css");
-
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        text-align: center;
+      :root {
+        --main-bg: #ffffff;
+        --main-text: #0b0b0b;
+        --accent: #0055aa;
       }
-
-      .thank-you {
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --main-bg: #060606;
+          --main-text: #f3f3f3;
+          --accent: #cad5a6;
+        }
       }
-
-      h2 {
-        font-size: 6rem;
-        font-weight: bolder;
-      }
-
-      p {
-        margin: 10px 0;
-        font-size: 1.2rem;
-      }
-
-      .back-button {
-        all: unset;
-        display: inline-flex;
-        align-items: center;
-        cursor: pointer;
-        gap: 0.5rem;
-        color: var(--main-text);
-        text-decoration: none;
-        padding: 0.3rem;
-        font-size: 1.2rem;
-        font-weight: 600;
-        border-bottom: 1px solid var(--accent);
-      }
-
-      .back-button:hover {
-        color: var(--accent);
-      }
-
-      .back-arrow {
-        font-size: 1.4rem;
-        transition: transform 0.3s ease;
-      }
-
-      .back-button:hover .back-arrow {
-        transform: translateX(-3px);
-      }
+      /* keep default list/reset handled inlined in body */
     </style>
   </head>
-  <body>
-    <div class="thank-you">
-      <h2>Thank You!</h2>
-      <p>Your message has been successfully sent.</p>
-      <p>I'll get back to you as soon as possible!</p>
-      <a href="/" class="back-button">
-        <span class="back-arrow">←</span>
-        Back to Portfolio
+
+  <body
+    style="
+      margin: 0;
+      min-height: 100vh;
+      background: var(--main-bg);
+      color: var(--main-text);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Courier New',
+        monospace;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    "
+  >
+    <div
+      style="
+        text-align: center;
+        padding: 2rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      "
+    >
+      <h2 style="margin: 0 0 0.6rem 0; font-size: 3.5rem; font-weight: 800">
+        Thank You!
+      </h2>
+      <p style="margin: 0 0 0.25rem 0; font-size: 1.05rem">
+        Your message has been successfully sent.
+      </p>
+      <p style="margin: 0 0 1rem 0; font-size: 1.05rem">
+        I'll get back to you as soon as possible!
+      </p>
+      <a
+        href="/"
+        style="
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 0.3rem;
+          text-decoration: none;
+          color: var(--main-text);
+          font-weight: 700;
+          border-bottom: 1px solid var(--accent);
+        "
+      >
+        <span style="font-size: 1.2rem">←</span> Back to Portfolio
       </a>
     </div>
   </body>

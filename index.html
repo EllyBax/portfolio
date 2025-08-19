@@ -1,410 +1,695 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>ellyb | the junior developer</title>
-    <link
-      rel="shortcut icon"
-      href="/resources/favicon.ico"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="/resources/main.css" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/resources/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/resources/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/resources/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/resources/site.webmanifest" />
-  </head>
-  <body>
-    <main>
-      <!-- Radio inputs moved to top level for CSS sibling selectors to work -->
-      <input
-        type="radio"
-        id="projects"
-        name="category"
-        value="projects"
-        checked
-      />
-      <input
-        type="radio"
-        id="programmingLanguages"
-        name="category"
-        value="programmingLanguages"
-      />
-      <input type="radio" id="about" name="category" value="about" />
-      <input type="radio" id="education" name="category" value="education" />
-      <input type="radio" id="interests" name="category" value="interests" />
-      <input type="radio" id="contact" name="category" value="contact" />
+    <style>
+      :root {
+        --main-bg: #ffffff;
+        --main-text: #0b0b0b;
+        --secondary-bg: #f2f2f2;
+        --secondary-text: #222222;
+        --accent: #0055aa;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --main-bg: #060606;
+          --main-text: #f3f3f3;
+          --secondary-bg: #101010;
+          --secondary-text: #f1f1f1;
+          --accent: #cad5a6;
+        }
+      }
 
-      <div class="title">
-        <div class="names">
-          <p class="location">Dar es Salaam, Tanzania</p>
-          <h1>Elly B</h1>
-          <p>Full Stack Developer</p>
-        </div>
-        <div class="links">
-          <a target="_blank" href="mailto:baxllycc@gmail.com">email</a>
-          <a target="_blank" href="https://github.com/EllyBax">github</a>
-          <a href="/blog.html">blog</a>
-          <button
+      /* small helper: reset list bullets for sections that need it */
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+
+  <body
+    style="
+      margin: 0;
+      min-height: 100vh;
+      background: var(--main-bg);
+      color: var(--main-text);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Courier New',
+        monospace;
+      display: flex;
+      font-size: 1.2rem;
+      align-items: center;
+      justify-content: center;
+    "
+  >
+    <main
+      style="
+        width: clamp(320px, 900px, 90%);
+        max-width: 900px;
+        padding: 1rem;
+        box-sizing: border-box;
+      "
+    >
+      <!-- Header -->
+      <header
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1rem 0;
+          border-bottom: 1px solid var(--secondary-bg);
+        "
+      >
+        <div style="padding: 0.25rem 0">
+          <p
             style="
-              all: unset;
-              border: 1px solid var(--accent);
-              background: var(--accent);
-              padding: 0.4rem;
-              border-radius: 4px;
+              margin: 0 0 0.25rem 0;
+              color: var(--accent);
+              font-size: 0.95rem;
             "
           >
-            <a
-              style="
-                font-size: 1.2rem;
-                font-weight: bold;
-                text-decoration: none;
-                color: var(--main-bg);
-              "
-              href="https://tsp5jtxx2r4durvr.public.blob.vercel-storage.com/Elly-Bachubila-Resume-dgURSVf1v3uzNLQUjY04wCe0eDUXw2.pdf"
-              target="_blank"
-              >Download CV</a
-            >
-          </button>
-        </div>
-      </div>
-
-      <div class="content">
-        <div class="categories">
-          <!-- Labels stay in sidebar for visual organization -->
-          <label for="projects">Projects</label>
-          <label for="programmingLanguages">Programming Languages</label>
-          <label for="about">About</label>
-          <label for="education">Education</label>
-          <label for="interests">Interests</label>
-          <label for="contact">Contact</label>
+            Dar es Salaam, Tanzania
+          </p>
+          <h1 style="margin: 0; font-size: 4rem; font-weight: 800">Elly B</h1>
+          <p style="margin: 0; color: var(--accent); font-size: 1.05rem">
+            Full Stack Developer
+          </p>
         </div>
 
-        <section class="content-body" aria-labelledby="pl-heading">
-          <!-- Programming languages -->
-          <ul class="programming">
-            <li>
-              <a
-                href="https://www.typescriptlang.org"
-                style="color: #007acc"
-                target="_blank"
-                >typescript</a
-              >
-              <span
-                >JavaScript that finally decided to grow up and get type
-                safety.</span
-              >
-            </li>
-            <li>
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/HTML"
-                style="color: #e44d26"
-                target="_blank"
-                >html + css</a
-              >
-              <span
-                >Building the web, one div at a time—no tables allowed!</span
-              >
-            </li>
-            <li>
-              <a
-                href="https://en.cppreference.com/w/"
-                style="color: #f34b7d"
-                target="_blank"
-                >C/C++</a
-              >
-              <span
-                >Where I learned that pointers can be both my best friend and
-                worst enemy.</span
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.python.org"
-                style="color: #ffd54d"
-                target="_blank"
-                >python</a
-              >
-              <span
-                >Making data dance and automating my life, one script at a
-                time.</span
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.mysql.com"
-                style="color: #4479a1"
-                target="_blank"
-                >sql</a
-              >
-              <span
-                >Turning chaos into order—because every database deserves a
-                little love.</span
-              >
-            </li>
-          </ul>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            align-items: flex-end;
+          "
+        >
+          <a
+            href="mailto:baxllycc@gmail.com"
+            target="_blank"
+            style="
+              color: var(--accent);
+              font-weight: 600;
+              font-size: 0.95rem;
+              padding: 0.1rem 0;
+              border-bottom: 1px solid transparent;
+            "
+          >
+            email
+          </a>
+          <a
+            href="https://github.com/EllyBax"
+            target="_blank"
+            style="
+              color: var(--accent);
+              font-weight: 600;
+              font-size: 0.95rem;
+              padding: 0.1rem 0;
+              border-bottom: 1px solid transparent;
+            "
+          >
+            github
+          </a>
+          <a
+            href="/blog.html"
+            style="
+              color: var(--accent);
+              font-weight: 600;
+              font-size: 0.95rem;
+              padding: 0.1rem 0;
+              border-bottom: 1px solid transparent;
+            "
+          >
+            blog
+          </a>
+          <a
+            href="https://tsp5jtxx2r4durvr.public.blob.vercel-storage.com/Elly-Bachubila-Resume-dgURSVf1v3uzNLQUjY04wCe0eDUXw2.pdf"
+            target="_blank"
+            style="
+              display: inline-block;
+              padding: 0.35rem 0.6rem;
+              border: 1px solid var(--accent);
+              background: var(--accent);
+              color: var(--main-bg);
+              font-weight: 700;
+              font-size: 0.95rem;
+            "
+          >
+            Download CV
+          </a>
+        </div>
+      </header>
 
-          <!-- About Me -->
-          <div class="about">
-            <p>
+      <!-- Content (single column; sections have markdown-like headings) -->
+      <section
+        style="
+          padding: 1rem 0;
+          display: flex;
+          flex-direction: column;
+          gap: 1.25rem;
+        "
+      >
+        <!-- About -->
+        <article>
+          <h2 style="margin: 0 0 0.5rem 0; font-size: 2rem; font-weight: 800">
+            About Me
+          </h2>
+
+          <div
+            style="font-size: 1rem; line-height: 1.5; color: var(--main-text)"
+          >
+            <p style="margin: 0 0 0.6rem 0">
+              I am what I'd like to call <strong>the junior dev.</strong> - gets
+              things done, - learns quickly, and loves the process. Let’s build
+              something together!
+            </p>
+            <p style="margin: 0 0 0.6rem 0">
               I am a full stack developer with over two years of experience
-              specializing in
-              <span style="color: #42b883">TypeScript</span> and modern web
-              frameworks including
-              <a target="_blank" href="https://vuejs.org" style="color: #42b883"
+              specializing in <span style="color: #42b883">TypeScript</span> and
+              modern web frameworks including
+              <a href="https://vuejs.org" target="_blank" style="color: #42b883"
                 >Vue</a
               >,
               <a
-                target="_blank"
                 href="https://nextjs.org"
-                style="color: #cfcfcf"
-                >Next.js</a
+                style="color: #565508"
+                target="_blank"
+              >
+                Next.js </a
               >, and
               <a
-                target="_blank"
                 href="https://astro.build"
+                target="_blank"
                 style="color: #ff5c00"
                 >Astro</a
               >. I also work with <span style="color: #306998">Python</span> and
-              <span style="color: #6e4c3e">Elixir</span> for various projects.
+              <span style="color: #6e4c3e">Elixir</span>.
             </p>
 
-            <p>
-              My backend experience spans multiple technologies including
-              <span style="color: #4b8bbe">Express</span>,
-              <span style="color: #00b8d8">Hono</span>,
-              <a
-                target="_blank"
-                href="https://nextjs.org"
-                style="color: #cfcfcf"
-                >Next.js API</a
-              >, <span style="color: #ff3e00">tRPC</span>,
-              <span style="color: #ff2d55">React Query</span>, and
-              <a
-                target="_blank"
-                href="https://convex.dev"
-                style="color: #00aaff"
-                >Convex</a
-              >, which has become my preferred backend solution.
+            <p style="margin: 0 0 0.6rem 0">
+              My backend experience spans Express, Hono, Next.js API, tRPC,
+              React Query, and Convex (my preferred backend solution).
             </p>
 
-            <p>
-              Beyond development, I contribute to the developer community by
-              mentoring junior developers through
-              <a target="_blank" href="https://jrdev.org" style="color: #007acc"
+            <p style="margin: 0 0 0.6rem 0">
+              I mentor junior developers through
+              <a href="https://jrdev.org" target="_blank" style="color: #007acc"
                 >jrdev.org</a
               >
-              and staying current with industry trends through thought leaders
-              like
-              <a target="_blank" href="https://t3.gg" style="color: #007acc"
+              and I'm heavily inspired by soydevs
+              <a href="https://t3.gg" target="_blank" style="color: #007acc"
                 >Theo</a
               >,
               <a
-                target="_blank"
                 href="https://mattpocock.com"
+                target="_blank"
                 style="color: #007acc"
                 >Matt Pocock</a
               >, and
               <a
-                target="_blank"
                 href="https://www.twitch.tv/theprimeagen"
+                target="_blank"
                 style="color: #007acc"
                 >ThePrimeagen</a
               >.
             </p>
 
-            <p>
-              I have successfully delivered multiple
-              <label
-                for="projects"
-                style="
-                  color: #007acc;
-                  cursor: pointer;
-                  text-decoration: underline;
-                "
-                >independent projects</label
+            <p style="margin: 0">
+              I have delivered multiple
+              <a href="https://github.com/EllyBax" target="_blank"
+                ><strong style="color: #007acc">independent projects</strong></a
               >
-              and am eager to apply my skills in collaborative team
-              environments.
+              and enjoy collaborating in team environments.
             </p>
           </div>
+        </article>
 
-          <!-- Education -->
-          <div class="education">
-            <div>
-              <h3>
-                Ordinary Diploma in Electronics and Telecommunications
-                Engineering
-              </h3>
-              <p class="date">2020 - 2023</p>
-              <p class="college">
-                <a
-                  href="http://dit.ac.tz"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Dar es Salaam Institute of Tehcnology (DIT)
-                </a>
-              </p>
-            </div>
-            <div>
-              <h3>Bachelor of Engineering in Computer Engineering</h3>
-              <p class="date">2023 - Present</p>
-              <p class="college">
-                <a
-                  href="http://dit.ac.tz"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Dar es Salaam Institute of Tehcnology (DIT)
-                </a>
-              </p>
-            </div>
-          </div>
+        <!-- Projects -->
+        <article>
+          <h2 style="margin: 0 0 0.5rem 0; font-size: 2rem; font-weight: 800">
+            Projects
+          </h2>
 
-          <!-- Interests -->
-          <div class="interests">
-            <span>Software Development</span>
-            <span>Problem Solving & Algorithm Optimization</span>
-            <span>Technical Literature (Reading)</span>
-            <span>Continuous Learning</span>
-            <span>Knowledge Sharing & Mentorship</span>
-          </div>
-
-          <!-- Projects -->
-          <ul class="projects">
+          <ul style="display: flex; flex-direction: column; gap: 0.6rem">
             <li>
               <a
                 href="https://www.npmjs.com/package/trysafely"
-                style="color: #007acc"
                 target="_blank"
-                >trysafely</a
+                style="color: #007acc; font-size: 1.05rem"
               >
-              <span
-                >A TypeScript utility helper to simplify error handling.</span
+                <strong> trysafely </strong>
+              </a>
+              <div
+                style="
+                  color: var(--main-text);
+                  opacity: 0.85;
+                  font-size: 0.95rem;
+                "
               >
+                A TypeScript utility helper to simplify error handling.
+              </div>
             </li>
-            <!-- <li>
+
+            <li>
               <a
-                href="https://exam-checkin.netlify.app/"
-                style="color: #4caf50"
+                href="https://npmjs.com/package/tryio"
                 target="_blank"
-                >exam.checkin</a
+                style="color: #28ea0e; font-size: 1.05rem"
               >
-              <span
-                >A platform to sign student examination attendance using
-                fingerprint.</span
+                <strong> tryio </strong>
+              </a>
+              <div
+                style="
+                  color: var(--main-text);
+                  opacity: 0.85;
+                  font-size: 0.95rem;
+                "
               >
-            </li> -->
+                A beginner-friendly TypeScript library for working with
+                asynchronous I/O.
+              </div>
+            </li>
+
             <li>
               <a
                 href="https://rp-scissors.netlify.app/"
-                style="color: #ff5733"
                 target="_blank"
-                >rp-scissors</a
+                style="color: #ff5733; font-size: 1.05rem"
               >
-              <span>A web-based rock-paper-scissors single-player game.</span>
+                <strong> rp-scissors </strong>
+              </a>
+              <div
+                style="
+                  color: var(--main-text);
+                  opacity: 0.85;
+                  font-size: 0.95rem;
+                "
+              >
+                A web-based rock-paper-scissors single-player game.
+              </div>
             </li>
-            <!-- <li>
-              <a
-                href="https://dartu.netlify.app/"
-                style="color: #e88120"
-                target="_blank"
-                >face.attend</a
-              >
-              <span
-                >A web appliaction to record student attendance using facial
-                recognition.</span
-              >
-            </li> -->
           </ul>
+        </article>
 
-          <!-- Contact -->
-          <div class="contact">
-            <form
-              action="https://formsubmit.co/25f11d692c946f5487b0d779434c2e04"
-              method="POST"
+        <!-- Programming Languages -->
+        <article>
+          <h2 style="margin: 0 0 0.5rem 0; font-size: 2rem; font-weight: 800">
+            Programming Languages
+          </h2>
+
+          <ul style="display: flex; flex-direction: column; gap: 0.6rem">
+            <li>
+              <a
+                href="https://www.typescriptlang.org"
+                target="_blank"
+                style="color: #007acc; font-size: 1.05rem"
+              >
+                typescript
+              </a>
+              <div
+                style="
+                  color: var(--main-text);
+                  opacity: 0.85;
+                  font-size: 0.95rem;
+                "
+              >
+                JavaScript that finally decided to grow up and get type safety.
+              </div>
+            </li>
+
+            <li>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                target="_blank"
+                style="color: #e44d26; font-size: 1.05rem"
+              >
+                html + css
+              </a>
+              <div
+                style="
+                  color: var(--main-text);
+                  opacity: 0.85;
+                  font-size: 0.95rem;
+                "
+              >
+                Building the web, one div at a time—no tables allowed!
+              </div>
+            </li>
+
+            <li>
+              <a
+                href="https://en.cppreference.com/w/"
+                target="_blank"
+                style="color: #f34b7d; font-size: 1.05rem"
+              >
+                C/C++
+              </a>
+              <div
+                style="
+                  color: var(--main-text);
+                  opacity: 0.85;
+                  font-size: 0.95rem;
+                "
+              >
+                Where I learned that pointers can be both my best friend and
+                worst enemy.
+              </div>
+            </li>
+
+            <li>
+              <a
+                href="https://www.python.org"
+                target="_blank"
+                style="color: #ffd54d; font-size: 1.05rem"
+              >
+                python
+              </a>
+              <div
+                style="
+                  color: var(--main-text);
+                  opacity: 0.85;
+                  font-size: 0.95rem;
+                "
+              >
+                Making data dance and automating my life, one script at a time.
+              </div>
+            </li>
+
+            <li>
+              <a
+                href="https://www.mysql.com"
+                target="_blank"
+                style="color: #4479a1; font-size: 1.05rem"
+              >
+                sql
+              </a>
+              <div
+                style="
+                  color: var(--main-text);
+                  opacity: 0.85;
+                  font-size: 0.95rem;
+                "
+              >
+                Turning chaos into order—because every database deserves a
+                little love.
+              </div>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Interests -->
+        <!-- <article>
+          <h2
+            style="margin: 0 0 0.5rem 0; font-size: 2rem; font-weight: 800"
+          >
+            Interests
+          </h2>
+
+          <div style="display: flex; gap: 0.6rem; flex-wrap: wrap">
+            <span
+              style="
+                background: rgba(39, 39, 37, 0.12);
+                color: var(--accent);
+                padding: 0.4rem 0.6rem;
+                font-size: 0.95rem;
+              "
             >
-              <input
-                type="hidden"
-                name="_next"
-                value="https://jrdv.link/thanks.html"
-              />
-              <input
-                type="hidden"
-                name="_subject"
-                value="new submission from jrdv.link!"
-              />
-              <input type="text" name="_honey" style="display: none" />
-              <input type="hidden" name="_captcha" value="false" />
-              <input
-                type="hidden"
-                name="_blacklist"
-                value="free money, click here, win a prize, guaranteed, act now, limited time offer, earn cash, make money fast, spam, buy now, special promotion, risk-free, 100% satisfied, free trial, unsubscribe, congratulations, winner, cheap, offer expires, call now"
-              />
-              <div>
-                <label for="full_name">Name:</label>
-                <input
-                  id="full_name"
-                  type="text"
-                  name="full_name"
-                  placeholder="full name"
-                  required
-                />
-              </div>
-              <div>
-                <label for="phone">Phone:</label>
-                <input
-                  id="phone"
-                  type="tel"
-                  name="phone"
-                  placeholder="phone number"
-                />
-              </div>
-              <div>
-                <label for="email_contact">Email:</label>
-                <input
-                  id="email_contact"
-                  type="email"
-                  name="email"
-                  placeholder="example@yourcompany.org"
-                  required
-                />
-              </div>
-              <div>
-                <label for="message">Message:</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  cols="30"
-                  rows="4"
-                  placeholder="leave your message here"
-                  required
-                >
-                </textarea>
-              </div>
-              <div>
-                <input type="submit" value="submit" />
-              </div>
-            </form>
+              Software Development
+            </span>
+            <span
+              style="
+                background: rgba(39, 39, 37, 0.12);
+                color: var(--accent);
+                padding: 0.4rem 0.6rem;
+                font-size: 0.95rem;
+              "
+            >
+              Problem Solving & Algorithm Optimization
+            </span>
+            <span
+              style="
+                background: rgba(39, 39, 37, 0.12);
+                color: var(--accent);
+                padding: 0.4rem 0.6rem;
+                font-size: 0.95rem;
+              "
+            >
+              Technical Literature (Reading)
+            </span>
+            <span
+              style="
+                background: rgba(39, 39, 37, 0.12);
+                color: var(--accent);
+                padding: 0.4rem 0.6rem;
+                font-size: 0.95rem;
+              "
+            >
+              Continuous Learning
+            </span>
+            <span
+              style="
+                background: rgba(39, 39, 37, 0.12);
+                color: var(--accent);
+                padding: 0.4rem 0.6rem;
+                font-size: 0.95rem;
+              "
+            >
+              Knowledge Sharing & Mentorship
+            </span>
           </div>
-        </section>
-      </div>
+        </article> -->
+
+        <!-- Education -->
+        <!-- <article>
+          <h2 style="margin: 0 0 0.5rem 0; font-size: 2rem; font-weight: 800">
+            Education
+          </h2>
+
+          <div style="display: flex; flex-direction: column; gap: 0.75rem">
+            <div
+              style="
+                border-left: 3px solid var(--accent);
+                padding-left: 0.75rem;
+              "
+            >
+              <h3
+                style="
+                  margin: 0 0 0.25rem 0;
+                  color: var(--accent);
+                  font-size: 1rem;
+                  font-weight: 800;
+                "
+              >
+                Ordinary Diploma in Electronics and Telecommunications
+                Engineering
+              </h3>
+              <div
+                style="
+                  font-size: 0.95rem;
+                  color: var(--secondary-text);
+                  margin-bottom: 0.25rem;
+                "
+              >
+                2020 - 2023
+              </div>
+              <div style="font-size: 0.95rem">
+                <a
+                  href="http://dit.ac.tz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style="color: var(--main-text)"
+                >
+                  Dar es Salaam Institute of Technology (DIT)
+                </a>
+              </div>
+            </div>
+
+            <div
+              style="
+                border-left: 3px solid var(--accent);
+                padding-left: 0.75rem;
+              "
+            >
+              <h3
+                style="
+                  margin: 0 0 0.25rem 0;
+                  color: var(--accent);
+                  font-size: 1rem;
+                  font-weight: 800;
+                "
+              >
+                Bachelor of Engineering in Computer Engineering
+              </h3>
+              <div
+                style="
+                  font-size: 0.95rem;
+                  color: var(--secondary-text);
+                  margin-bottom: 0.25rem;
+                "
+              >
+                2023 - Present
+              </div>
+              <div style="font-size: 0.95rem">
+                <a
+                  href="http://dit.ac.tz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style="color: var(--main-text)"
+                >
+                  Dar es Salaam Institute of Technology (DIT)
+                </a>
+              </div>
+            </div>
+          </div>
+        </article> -->
+
+        <!-- Contact (form with rigid inputs) -->
+        <article>
+          <h2 style="margin: 0 0 0.5rem 0; font-size: 2rem; font-weight: 800">
+            Contact
+          </h2>
+
+          <form
+            action="https://formsubmit.co/25f11d692c946f5487b0d779434c2e04"
+            method="POST"
+            style="
+              display: flex;
+              flex-direction: column;
+              gap: 0.5rem;
+              padding-top: 0.25rem;
+            "
+          >
+            <input
+              type="hidden"
+              name="_next"
+              value="https://jrdv.link/thanks.html"
+            />
+            <input
+              type="hidden"
+              name="_subject"
+              value="new submission from jrdv.link!"
+            />
+            <input type="text" name="_honey" style="display: none" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="hidden"
+              name="_blacklist"
+              value="free money, click here, win a prize, guaranteed, act now, limited time offer, earn cash, make money fast, spam, buy now, special promotion, risk-free, 100% satisfied, free trial, unsubscribe, congratulations, winner, cheap, offer expires, call now"
+            />
+
+            <label for="full_name" style="font-weight: 700; font-size: 0.95rem"
+              >Name:</label
+            >
+            <input
+              id="full_name"
+              name="full_name"
+              type="text"
+              placeholder="full name"
+              required
+              style="
+                padding: 10px;
+                border: 1px solid rgba(39, 39, 37, 0.28);
+                background: var(--main-bg);
+                color: var(--main-text);
+                font-family: inherit;
+                font-size: 0.95rem;
+                outline: none;
+                border-radius: 0;
+                box-sizing: border-box;
+              "
+            />
+
+            <label for="phone" style="font-weight: 700; font-size: 0.95rem"
+              >Phone:</label
+            >
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              placeholder="phone number"
+              style="
+                padding: 10px;
+                border: 1px solid rgba(39, 39, 37, 0.28);
+                background: var(--main-bg);
+                color: var(--main-text);
+                font-family: inherit;
+                font-size: 0.95rem;
+                outline: none;
+                border-radius: 0;
+                box-sizing: border-box;
+              "
+            />
+
+            <label
+              for="email_contact"
+              style="font-weight: 700; font-size: 0.95rem"
+              >Email:</label
+            >
+            <input
+              id="email_contact"
+              name="email"
+              type="email"
+              placeholder="example@yourcompany.org"
+              required
+              style="
+                padding: 10px;
+                border: 1px solid rgba(39, 39, 37, 0.28);
+                background: var(--main-bg);
+                color: var(--main-text);
+                font-family: inherit;
+                font-size: 0.95rem;
+                outline: none;
+                border-radius: 0;
+                box-sizing: border-box;
+              "
+            />
+
+            <label for="message" style="font-weight: 700; font-size: 0.95rem"
+              >Message:</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              cols="30"
+              rows="4"
+              placeholder="leave your message here"
+              required
+              style="
+                padding: 10px;
+                border: 1px solid rgba(39, 39, 37, 0.28);
+                background: var(--main-bg);
+                color: var(--main-text);
+                font-family: inherit;
+                font-size: 0.95rem;
+                outline: none;
+                border-radius: 0;
+                box-sizing: border-box;
+                resize: vertical;
+              "
+            ></textarea>
+
+            <input
+              type="submit"
+              value="submit"
+              style="
+                padding: 10px;
+                border: 1px solid rgba(39, 39, 37, 0.28);
+                background: var(--accent);
+                color: var(--main-bg);
+                font-family: inherit;
+                font-weight: 700;
+                font-size: 0.95rem;
+                cursor: pointer;
+                border-radius: 0;
+                box-sizing: border-box;
+              "
+            />
+          </form>
+        </article>
+      </section>
     </main>
   </body>
 </html>
